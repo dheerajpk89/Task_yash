@@ -1,0 +1,28 @@
+server:
+  port: 7656
+  
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+      
+spring:
+  application:
+    name: bankingone-services
+  data:
+    mongodb:
+     # host: localhost
+     # port: 27017
+      database: bmfjr73het4tagv
+      uri: mongodb://u2pfoanxubcuv1cdopzy:nd2C3RVocpdIaxVBJwvJ@bmfjr73het4tagv-mongodb.services.clever-cloud.com:27017/bmfjr73het4tagv
+  
+management:
+  security:
+    enabled: false
